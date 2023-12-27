@@ -1,14 +1,9 @@
-import { ContactList } from './ContactList/ContactList';
-import { ContactForm } from './ContactForm/ContactForm';
-import { Filter } from './Filter/Filter';
-import {
-  Container,
-  StyledTitle,
-  StyledTitles,
-} from './ContactForm/ContactForm.styled';
+import { ContactList } from './ContactList';
+import { ContactForm } from './ContactForm';
+import { Filter } from './Filter';
+import { Container, StyledTitle, StyledTitles } from './ContactForm.styled';
 
 export const App = () => {
-
   return (
     <Container>
       <StyledTitle>Phonebook</StyledTitle>

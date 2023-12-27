@@ -1,18 +1,15 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { ContactElem } from 'components/ContactElem/ContactElem';
-import {
-  ContactsWrap,
-  StyledContactsList,
-} from 'components/ContactForm/ContactForm.styled';
+import { ContactElem } from './ContactElem';
+import { ContactsWrap, StyledContactsList } from './ContactForm.styled';
 import { createSelector } from '@reduxjs/toolkit';
 import {
   selectContacts,
   selectError,
   selectFilter,
   selectIsLoading,
-} from 'store/selectors';
+} from 'store/redux/selectors';
 import { useEffect } from 'react';
-import { fetchContactsThunk } from 'store/operations';
+import { fetchContactsThunk } from 'store/redux/operations';
 
 export const ContactList = () => {
   const dispatch = useDispatch();

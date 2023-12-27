@@ -1,10 +1,7 @@
-import {
-  StyledBtn,
-  StyledContacts,
-} from 'components/ContactForm/ContactForm.styled';
+import { StyledBtn, StyledContacts } from './ContactForm.styled';
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { deleteContactsThunk } from 'store/operations';
+import { deleteContactsThunk } from 'store/redux/operations';
 
 export const ContactElem = ({ name, number, id }) => {
   const dispatch = useDispatch();
@@ -12,7 +9,10 @@ export const ContactElem = ({ name, number, id }) => {
     <>
       <StyledContacts>
         {name}: {number}
-        <StyledBtn type="button" onClick={() => dispatch(deleteContactsThunk(id))}>
+        <StyledBtn
+          type="button"
+          onClick={() => dispatch(deleteContactsThunk(id))}
+        >
           Delete
         </StyledBtn>
       </StyledContacts>
