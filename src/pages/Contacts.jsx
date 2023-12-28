@@ -2,11 +2,7 @@ import React from 'react';
 import { ContactList } from '../components/ContactList';
 import { ContactForm } from '../components/ContactForm';
 import { Filter } from '../components/Filter';
-import {
-  Container,
-  StyledTitle,
-  StyledTitles,
-} from '../components/ContactForm.styled';
+import { Container, StyledTitle } from '../components/ContactForm.styled';
 
 export const Contacts = () => {
   return (
