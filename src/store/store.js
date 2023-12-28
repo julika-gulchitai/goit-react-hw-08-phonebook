@@ -12,6 +12,7 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import { combineReducers } from 'redux';
 
 const authPersistConfig = {
   key: 'auth',
@@ -33,3 +34,12 @@ export const store = configureStore({
 });
 
 export const persistor = persistStore(store);
+
+const rootReducer = combineReducers({
+  auth: authReducer,
+  contacts: contactsBookReducer,
+});
+export const storeC = configureStore({
+  reducer: rootReducer,
+  // devTools: process.env.NODE_EW !== 'contacts',
+});

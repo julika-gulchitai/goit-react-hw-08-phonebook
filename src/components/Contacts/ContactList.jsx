@@ -10,6 +10,7 @@ import {
 } from 'store/redux/selectors';
 import { useEffect } from 'react';
 import { fetchContactsThunk } from 'store/redux/operations';
+import { Loader } from 'components/Loader';
 
 export const ContactList = () => {
   const dispatch = useDispatch();
@@ -41,7 +42,7 @@ export const ContactList = () => {
           </StyledContactsList>
         </ul>
       )}
-      {loading && <h2>Loading...</h2>}
+      {loading && <Loader />}
       {error && <h2>{error}</h2>}
     </ContactsWrap>
   );
