@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { Header } from '../Header';
+import Header from '../Header';
 import { Contacts } from '../../pages/Contacts/Contacts';
 import { Home } from '../../pages/Home/Home';
 import { PrivateRoute } from '../../configRoute/PrivateRoute';
@@ -12,13 +12,15 @@ import { Loader } from 'components/Loader';
 import { Register } from 'pages/Register/Register';
 import { Login } from 'pages/Login/Login';
 import NotFound from 'pages/NotFound/NotFound';
+import { useEffect } from 'react';
+import { refreshThunk } from 'store/auth/operations';
 
 export const App = () => {
-  //   const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefresh);
-  //   useEffect(() => {
-  //     dispatch(refreshThunk);
-  //   }, [dispatch]);
+  useEffect(() => {
+    dispatch(refreshThunk());
+  }, [dispatch]);
 
   return isRefreshing ? (
     <Loader />
@@ -26,7 +28,7 @@ export const App = () => {
     <div>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<h1>Homepage</h1>} />
         <Route
           path="/contacts"
           element={
