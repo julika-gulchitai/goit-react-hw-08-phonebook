@@ -5,21 +5,16 @@ import { Home } from '../../pages/Home/Home';
 import { PrivateRoute } from '../../configRoute/PrivateRoute';
 import { PublicRoute } from '../../configRoute/PublicRoute';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  selectFilter,
-  selectContacts,
-  selectError,
-  selectIsLoading,
-} from 'store/redux/selectors';
+
 import { selectIsRefresh } from 'store/auth/selector';
-import { refreshThunk } from 'store/auth/operations';
+
 import { Loader } from 'components/Loader';
 import { Register } from 'pages/Register/Register';
 import { Login } from 'pages/Login/Login';
 import NotFound from 'pages/NotFound/NotFound';
 
 export const App = () => {
-  const dispatch = useDispatch();
+  //   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefresh);
   //   useEffect(() => {
   //     dispatch(refreshThunk);
