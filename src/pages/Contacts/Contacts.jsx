@@ -22,9 +22,9 @@ import { fetchContactsThunk } from 'store/redux/operations';
 
 export const Contacts = () => {
   const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(fetchContactsThunk());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(fetchContactsThunk());
+  }, [dispatch]);
 
   return (
     <Container>
