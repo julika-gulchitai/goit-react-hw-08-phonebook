@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { selectIsLogged } from 'store/auth/selector';
-
 import { NavLink } from 'react-router-dom';
 import { logoutThunk } from 'store/auth/operations';
 
@@ -10,7 +9,7 @@ const Navbar = () => {
   return (
     <div className="text-white font-bold flex gap-4">
       <NavLink to="/">Home</NavLink>
-      <NavLink to="/contacts">Contacts</NavLink>
+      {isLogged && <NavLink to="/contacts">Contacts</NavLink>}
       {!isLogged && (
         <>
           <NavLink to="/login">LogIn</NavLink>

@@ -3,9 +3,9 @@ import { selectIsLogged } from '../store/auth/selector';
 import { Navigate, useLocation } from 'react-router-dom';
 
 export const PrivateRoute = ({ children }) => {
-  const isLoggedIn = useSelector(selectIsLogged);
+  const isLogged = useSelector(selectIsLogged);
   const location = useLocation();
-  if (isLoggedIn) {
+  if (isLogged) {
     return children;
   }
 

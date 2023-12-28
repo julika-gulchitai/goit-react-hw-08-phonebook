@@ -30,6 +30,9 @@ export const StyledForm = styled.form`
 export const StyledTitle = styled.h2`
   color: #4d5a66;
   font-size: 30px;
+  font-weight: bold;
+  color: grey;
+  padding-top: 7px;
 `;
 export const StyledTitles = styled.h4`
   color: #4d5a66;
@@ -40,7 +43,8 @@ export const StyledText = styled.h6`
   color: #4d5a66;
   font-size: 15px;
   margin-bottom: 7px;
-  margin-top: 7px;
+  margin-top: 14px;
+  font-weight: bold;
 `;
 export const StyledBtn = styled.button`
   cursor: pointer;
@@ -93,4 +97,13 @@ export const ContactsWrap = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 10px;
+`;
+export const StyledP = styled.p`
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: grey;
+  margin-bottom: 7px;
 `;

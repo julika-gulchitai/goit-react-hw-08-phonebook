@@ -2,12 +2,20 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { registerThunk } from '../../store/auth/operations';
+import { toast } from 'react-toastify';
 
 export const Register = () => {
   const { register, handleSubmit } = useForm();
   const dispatch = useDispatch();
   const submit = data => {
-    dispatch(registerThunk(data));
+    dispatch(registerThunk(data))
+      .unwrap()
+      .then(res => {
+        toast.success(`Welcome ${res.user.name}!`);
+      })
+      .catch(() => {
+        toast.error('Something went wrong!!!');
+      });
   };
   return (
     <div className="flex justify-center items-center min-h-[80vh] ">

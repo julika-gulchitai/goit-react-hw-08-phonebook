@@ -1,7 +1,7 @@
 import { StyledBtn, StyledContacts } from './ContactForm.styled';
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { deleteContactsThunk } from 'store/redux/operations';
+import { deleteContactsThunk } from 'store/contacts/operations';
 
 export const ContactElem = ({ name, number, id }) => {
   const dispatch = useDispatch();

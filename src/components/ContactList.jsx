@@ -1,15 +1,19 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { ContactElem } from './ContactElem';
-import { ContactsWrap, StyledContactsList } from './ContactForm.styled';
+import {
+  StyledP,
+  ContactsWrap,
+  StyledContactsList,
+} from './ContactForm.styled';
 import { createSelector } from '@reduxjs/toolkit';
 import {
   selectContacts,
   selectError,
   selectFilter,
   selectIsLoading,
-} from 'store/redux/selectors';
+} from 'store/contacts/selectors';
 import { useEffect } from 'react';
-import { fetchContactsThunk } from 'store/redux/operations';
+import { fetchContactsThunk } from 'store/contacts/operations';
 import { Loader } from 'components/Loader';
 
 export const ContactList = () => {
@@ -32,7 +36,7 @@ export const ContactList = () => {
   return (
     <ContactsWrap>
       {contacts.length === 0 ? (
-        <p></p>
+        <StyledP>There are no contacts yet...</StyledP>
       ) : (
         <ul>
           <StyledContactsList>
