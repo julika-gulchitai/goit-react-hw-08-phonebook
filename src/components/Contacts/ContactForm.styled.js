@@ -11,7 +11,9 @@ export const Container = styled.div`
    align-items: center;
    font-size: 18px;
    background: #ecffda;
-   width: 800px;
+   width: 500px;
+   width: 500px;
+  padding-bottom: 25px;
    margin: 0 auto;
 `;
 export const StyledForm = styled.form`
@@ -46,7 +48,7 @@ export const StyledBtn = styled.button`
   padding: 5px 10px;
   margin-top: 5px;
   border-radius: 10px;
-  background: #71b4f7;
+  background: #6ee7b7;
   color: white;
   font-size: 15px;
   width: 130px;
@@ -77,7 +79,8 @@ export const StyledContactsList = styled.li`
   color: grey;
   text-decoration: none;
   display: block;
-  width: 600px;
+  width: 400px;
+  padding: 20px;
 `;
 
 export const StyledContacts = styled.div`

@@ -16,11 +16,11 @@ const initialState = {
   isRefreshing: false,
 };
 
-const handleLogin = (state, { payload }) => {
-  state.user = payload.user;
-  state.token = payload.token;
-  state.isLogged = true;
-};
+// const handleLogin = (state, { payload }) => {
+//   state.user = payload.user;
+//   state.token = payload.token;
+//   state.isLogged = true;
+// };
 
 const authSlice = createSlice({
   name: 'auth',

@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import Header from '../Header';
-import { Contacts } from '../../pages/Contacts/Contacts';
-import { Home } from '../../pages/Home/Home';
+import { Contacts } from '../../pages/Contacts';
+import Home from '../../pages/Home/Home';
 import { PrivateRoute } from '../../configRoute/PrivateRoute';
 import { PublicRoute } from '../../configRoute/PublicRoute';
 import { useDispatch, useSelector } from 'react-redux';
@@ -16,8 +16,8 @@ import { useEffect } from 'react';
 import { refreshThunk } from 'store/auth/operations';
 
 export const App = () => {
-  const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefresh);
+  const dispatch = useDispatch();
   useEffect(() => {
     dispatch(refreshThunk());
   }, [dispatch]);
@@ -28,7 +28,7 @@ export const App = () => {
     <div>
       <Header />
       <Routes>
-        <Route path="/" element={<h1>Homepage</h1>} />
+        <Route path="/" element={<Home />} />
         <Route
           path="/contacts"
           element={

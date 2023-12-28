@@ -32,7 +32,7 @@ export const ContactList = () => {
   return (
     <ContactsWrap>
       {contacts.length === 0 ? (
-        <p>There is no such contact. Please enter another name</p>
+        <p></p>
       ) : (
         <ul>
           <StyledContactsList>

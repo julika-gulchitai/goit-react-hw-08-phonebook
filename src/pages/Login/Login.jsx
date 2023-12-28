@@ -2,15 +2,13 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { loginThunk } from '../../store/auth/operations';
-// import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 export const Login = () => {
-  //   const navigate = useNavigate();
   const { register, handleSubmit } = useForm({
     defaultValues: {
-      email: 'marydress@ma.com',
-      password: 'marydress@ma.com',
+      email: '',
+      password: '',
     },
   });
   const dispatch = useDispatch();
